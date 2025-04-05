@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Youthful Dystopia</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     * {
@@ -101,10 +102,10 @@
     <img src="bag2.png" alt="Light Denim Bag">
   </div>
 
-  <form>
-    <input type="text" placeholder="Name" required />
-    <input type="email" placeholder="Email" required />
-    <input type="text" placeholder="Instagram" required />
+  <form name="contact" method="POST" netlify>
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <input type="text" name="instagram" placeholder="Instagram" required />
     <input type="submit" value="Begin Dreaming" />
   </form>
 </body>
