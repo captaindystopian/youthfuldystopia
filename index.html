@@ -31,13 +31,12 @@
       margin-bottom: 10px;
       animation: creepyFlicker 5s infinite;
       display: inline-block;
-      transition: transform 0.3s ease, letter-spacing 0.3s ease;
+      transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
     .hero-title:hover {
-      transform: scale(1.05) rotate(-1deg);
-      letter-spacing: 0.2rem;
-      animation: explode 0.8s ease forwards;
+      transform: scale(0.01);
+      opacity: 0;
     }
 
     @keyframes creepyFlicker {
