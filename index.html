@@ -20,51 +20,63 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       min-height: 100vh;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
     }
 
     .hero-title {
-      font-size: 6rem;
-      margin-bottom: 10px;
+      font-size: 8rem;
+      margin-bottom: 20px;
       display: inline-block;
+      animation: creepyFlicker 5s infinite;
     }
 
-    .hero-title.shrink {
-      animation: shrinkDisappear 0.4s forwards;
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      color: #bbbbbb;
     }
 
-    .hero-title.grow {
-      animation: growReappear 1.2s ease-in-out forwards, creepyFlicker 5s infinite;
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 50px;
     }
 
-    @keyframes shrinkDisappear {
-      to {
-        transform: scale(0.01);
-        opacity: 0;
-      }
+    .gallery img {
+      width: 200px;
+      border-radius: 10px;
     }
 
-    @keyframes growReappear {
-      0% {
-        transform: scale(0.01);
-        opacity: 0;
-      }
-      50% {
-        transform: scale(1.4);
-        opacity: 1;
-      }
-      75% {
-        transform: scale(0.95);
-      }
-      90% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
+    form {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      max-width: 800px;
+      margin-top: 20px;
+    }
+
+    input {
+      padding: 15px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 6px;
+      min-width: 220px;
+      flex: 1;
+    }
+
+    input[type="submit"] {
+      background-color: #ffffff;
+      color: #0d0d0d;
+      font-weight: bold;
+      cursor: pointer;
+      max-width: 220px;
     }
 
     @keyframes creepyFlicker {
