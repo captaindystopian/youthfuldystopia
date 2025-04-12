@@ -20,32 +20,48 @@
     }
 
     .hero-title {
-      font-size: 3.5rem;
+      font-size: 4rem;
       font-weight: bold;
       margin-bottom: 20px;
-      white-space: nowrap;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .hero-title span {
       display: inline-block;
-      animation: flicker 3s infinite ease-in-out;
+      animation: flicker 4s infinite;
+    }
+
+    .hero-title span:nth-child(odd) {
+      animation-delay: 0.5s;
+    }
+    .hero-title span:nth-child(even) {
+      animation-delay: 1.5s;
     }
 
     @keyframes flicker {
-      0%, 100% { opacity: 1; }
-      10%, 30%, 50%, 70%, 90% { opacity: 0.5; }
-      20%, 40%, 60%, 80% { opacity: 1; }
+      0%, 100% {
+        opacity: 1;
+      }
+      10%, 30%, 50%, 70%, 90% {
+        opacity: 0;
+      }
+      20%, 40%, 60%, 80% {
+        opacity: 1;
+      }
     }
 
     .tagline {
       font-size: 1.5rem;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     .hero-image {
-      max-width: 500px;
+      max-width: 600px;
       width: 100%;
-      margin: 0 auto 30px auto;
+      height: auto;
+      margin: 0 auto 40px auto;
       display: block;
     }
 
@@ -53,13 +69,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 15px;
       width: 100%;
-      max-width: 400px;
+      max-width: 500px;
     }
 
     .form-container input {
-      padding: 10px;
+      padding: 12px;
       width: 100%;
       border: none;
       border-radius: 4px;
@@ -67,7 +83,7 @@
     }
 
     .form-container button {
-      padding: 10px 20px;
+      padding: 12px 24px;
       background: white;
       color: black;
       font-weight: bold;
@@ -78,8 +94,8 @@
     }
 
     .discover-button {
-      margin-top: 30px;
-      padding: 10px 20px;
+      margin-top: 40px;
+      padding: 12px 24px;
       border: 2px solid white;
       color: white;
       text-decoration: none;
@@ -96,13 +112,14 @@
 
     @media (max-width: 600px) {
       .hero-title {
-        font-size: 2rem;
-        white-space: normal;
-        word-break: break-word;
+        font-size: 2.5rem;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: auto;
       }
 
       .form-container {
-        max-width: 300px;
+        max-width: 90%;
       }
     }
   </style>
