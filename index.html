@@ -20,81 +20,32 @@
     }
 
     .hero-title {
-      font-size: 4rem;
+      font-size: 3.5rem;
       font-weight: bold;
       margin-bottom: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      white-space: nowrap;
     }
 
     .hero-title span {
       display: inline-block;
-      animation: flicker 3s infinite;
-      user-select: none;
-    }
-
-    .hero-title span:nth-child(odd) {
-      animation-delay: 0.5s;
-    }
-    .hero-title span:nth-child(even) {
-      animation-delay: 1.5s;
-    }
-    .hero-title span:nth-child(3) {
-      animation-delay: 0.3s;
-    }
-    .hero-title span:nth-child(4) {
-      animation-delay: 2s;
-    }
-    .hero-title span:nth-child(5) {
-      animation-delay: 0.8s;
-    }
-    .hero-title span:nth-child(6) {
-      animation-delay: 1.2s;
-    }
-    .hero-title span:nth-child(7) {
-      animation-delay: 0.7s;
-    }
-    .hero-title span:nth-child(8) {
-      animation-delay: 1.4s;
-    }
-    .hero-title span:nth-child(9) {
-      animation-delay: 0.9s;
-    }
-    .hero-title span:nth-child(10) {
-      animation-delay: 2.2s;
-    }
-    .hero-title span:nth-child(11) {
-      animation-delay: 1s;
-    }
-    .hero-title span:nth-child(12) {
-      animation-delay: 2.5s;
-    }
-    .hero-title span:nth-child(13) {
-      animation-delay: 0.6s;
-    }
-    .hero-title span:nth-child(14) {
-      animation-delay: 1.7s;
+      animation: flicker 3s infinite ease-in-out;
     }
 
     @keyframes flicker {
-      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-        opacity: 1;
-      }
-      20%, 22%, 24%, 55% {
-        opacity: 0;
-      }
+      0%, 100% { opacity: 1; }
+      10%, 30%, 50%, 70%, 90% { opacity: 0.5; }
+      20%, 40%, 60%, 80% { opacity: 1; }
     }
 
     .tagline {
       font-size: 1.5rem;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .hero-image {
       max-width: 500px;
       width: 100%;
-      margin: 0 auto 40px auto;
+      margin: 0 auto 30px auto;
       display: block;
     }
 
@@ -102,13 +53,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
       width: 100%;
-      max-width: 500px;
+      max-width: 400px;
     }
 
     .form-container input {
-      padding: 12px;
+      padding: 10px;
       width: 100%;
       border: none;
       border-radius: 4px;
@@ -116,7 +67,7 @@
     }
 
     .form-container button {
-      padding: 12px 24px;
+      padding: 10px 20px;
       background: white;
       color: black;
       font-weight: bold;
@@ -126,21 +77,9 @@
       font-family: 'Share Tech Mono', monospace;
     }
 
-    @media (max-width: 600px) {
-      .hero-title {
-        font-size: 2.2rem;
-      }
-      .tagline {
-        font-size: 1.1rem;
-      }
-      .hero-image {
-        max-width: 90%;
-      }
-    }
-
     .discover-button {
-      margin-top: 40px;
-      padding: 12px 24px;
+      margin-top: 30px;
+      padding: 10px 20px;
       border: 2px solid white;
       color: white;
       text-decoration: none;
@@ -154,6 +93,18 @@
       background-color: white;
       color: #0d0d0d;
     }
+
+    @media (max-width: 600px) {
+      .hero-title {
+        font-size: 2rem;
+        white-space: normal;
+        word-break: break-word;
+      }
+
+      .form-container {
+        max-width: 300px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -164,7 +115,7 @@
   </h1>
   <p class="tagline">always wandering, never lost</p>
 
-  <img src="bag1.png" alt="Bag" class="hero-image">
+  <img src="1.png" alt="Bag" class="hero-image">
 
   <form name="contact" method="POST" data-netlify="true" class="form-container">
     <input type="text" name="name" placeholder="Your Name" required>
