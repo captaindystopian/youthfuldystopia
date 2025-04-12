@@ -23,11 +23,15 @@
       font-size: 4rem;
       font-weight: bold;
       margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .hero-title span {
       display: inline-block;
-      animation: flicker 2s infinite;
+      animation: flicker 3s infinite;
+      user-select: none;
     }
 
     .hero-title span:nth-child(odd) {
@@ -74,16 +78,9 @@
     }
 
     @keyframes flicker {
-      0%, 100% {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
         opacity: 1;
       }
-      10%, 30%, 50%, 70%, 90% {
-        opacity: 0;
-      }
-      20%, 40%, 60%, 80% {
-        opacity: 1;
-      }
-    }
       20%, 22%, 24%, 55% {
         opacity: 0;
       }
@@ -95,7 +92,7 @@
     }
 
     .hero-image {
-      max-width: 600px;
+      max-width: 500px;
       width: 100%;
       margin: 0 auto 40px auto;
       display: block;
@@ -131,11 +128,17 @@
 
     @media (max-width: 600px) {
       .hero-title {
-        font-size: 2.5rem;
-        flex-wrap: wrap;
+        font-size: 2.2rem;
+      }
+      .tagline {
+        font-size: 1.1rem;
+      }
+      .hero-image {
+        max-width: 90%;
       }
     }
-  .discover-button {
+
+    .discover-button {
       margin-top: 40px;
       padding: 12px 24px;
       border: 2px solid white;
