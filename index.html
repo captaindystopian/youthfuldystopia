@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Youthful Dystopia</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
@@ -16,11 +16,11 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 60px 20px;
+      padding: 40px 20px;
     }
 
     .hero-title {
-      font-size: 4rem;
+      font-size: 3.5rem;
       font-weight: bold;
       margin-bottom: 20px;
       display: flex;
@@ -30,38 +30,33 @@
 
     .hero-title span {
       display: inline-block;
-      animation: flicker 4s infinite;
+      animation: flicker 6s infinite;
     }
 
     .hero-title span:nth-child(odd) {
       animation-delay: 0.5s;
     }
+
     .hero-title span:nth-child(even) {
-      animation-delay: 1.5s;
+      animation-delay: 2s;
     }
 
     @keyframes flicker {
-      0%, 100% {
-        opacity: 1;
-      }
-      10%, 30%, 50%, 70%, 90% {
-        opacity: 0;
-      }
-      20%, 40%, 60%, 80% {
-        opacity: 1;
-      }
+      0%, 100% { opacity: 1; }
+      10%, 30%, 50%, 70%, 90% { opacity: 0.1; }
+      20%, 40%, 60%, 80% { opacity: 1; }
     }
 
     .tagline {
-      font-size: 1.5rem;
-      margin-bottom: 40px;
+      font-size: 1.25rem;
+      margin-bottom: 30px;
     }
 
     .hero-image {
-      max-width: 600px;
+      max-width: 500px;
       width: 100%;
       height: auto;
-      margin: 0 auto 40px auto;
+      margin-bottom: 30px;
       display: block;
     }
 
@@ -69,9 +64,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
       width: 100%;
-      max-width: 500px;
+      max-width: 450px;
     }
 
     .form-container input {
@@ -94,7 +89,7 @@
     }
 
     .discover-button {
-      margin-top: 40px;
+      margin-top: 30px;
       padding: 12px 24px;
       border: 2px solid white;
       color: white;
@@ -112,14 +107,23 @@
 
     @media (max-width: 600px) {
       .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
         flex-wrap: nowrap;
         white-space: nowrap;
         overflow-x: auto;
       }
 
+      .tagline {
+        font-size: 1rem;
+      }
+
       .form-container {
         max-width: 90%;
+      }
+
+      .form-container input,
+      .form-container button {
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -130,14 +134,15 @@
     &nbsp;
     <span>D</span><span>Y</span><span>S</span><span>T</span><span>O</span><span>P</span><span>I</span><span>A</span>
   </h1>
+
   <p class="tagline">always wandering, never lost</p>
 
-  <img src="1.png" alt="Bag" class="hero-image">
+  <img src="bag1.png" alt="Bag" class="hero-image" />
 
   <form name="contact" method="POST" data-netlify="true" class="form-container">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="text" name="instagram" placeholder="Instagram Handle">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="text" name="instagram" placeholder="Instagram Handle" />
     <button type="submit">Begin Dreaming</button>
   </form>
 
