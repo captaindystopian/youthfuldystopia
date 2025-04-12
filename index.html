@@ -41,16 +41,12 @@
     }
 
     .gallery {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
       margin-bottom: 50px;
     }
 
     .gallery img {
-      width: 300px;
+      width: 100%;
+      max-width: 600px;
       border-radius: 10px;
     }
 
@@ -116,11 +112,6 @@
         font-size: 1rem;
       }
 
-      .gallery {
-        flex-direction: column;
-        gap: 20px;
-      }
-
       .gallery img {
         width: 80%;
         max-width: 300px;
@@ -142,20 +133,6 @@
       }
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const title = document.querySelector(".hero-title");
-      title.addEventListener("mouseenter", () => {
-        title.classList.remove("grow");
-        title.classList.add("shrink");
-      });
-      title.addEventListener("mouseleave", () => {
-        title.classList.remove("shrink");
-        void title.offsetWidth;
-        title.classList.add("grow");
-      });
-    });
-  </script>
 </head>
 <body>
 
@@ -163,8 +140,7 @@
   <h2>always wandering, never lost</h2>
 
   <div class="gallery">
-    <img src="bag1.png" alt="Dark Denim Bag">
-    <img src="bag2.png" alt="Light Denim Bag">
+    <img src="bag1.png" alt="Hero Bag">
   </div>
 
   <form name="contact" method="POST" netlify>
