@@ -74,9 +74,16 @@
     }
 
     @keyframes flicker {
-      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      0%, 100% {
         opacity: 1;
       }
+      10%, 30%, 50%, 70%, 90% {
+        opacity: 0;
+      }
+      20%, 40%, 60%, 80% {
+        opacity: 1;
+      }
+    }
       20%, 22%, 24%, 55% {
         opacity: 0;
       }
@@ -128,6 +135,22 @@
         flex-wrap: wrap;
       }
     }
+  .discover-button {
+      margin-top: 40px;
+      padding: 12px 24px;
+      border: 2px solid white;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      font-family: 'Share Tech Mono', monospace;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .discover-button:hover {
+      background-color: white;
+      color: #0d0d0d;
+    }
   </style>
 </head>
 <body>
@@ -146,5 +169,7 @@
     <input type="text" name="instagram" placeholder="Instagram Handle">
     <button type="submit">Begin Dreaming</button>
   </form>
+
+  <a href="discover.html" class="discover-button">DISCOVER MORE</a>
 </body>
 </html>
