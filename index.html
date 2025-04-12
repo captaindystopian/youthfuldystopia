@@ -1,156 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Youthful Dystopia</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Share Tech Mono', monospace;
-    }
-
-    body {
       background-color: #0d0d0d;
-      color: #ffffff;
+      color: white;
+      font-family: 'Share Tech Mono', monospace;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-      padding: 40px 20px;
       text-align: center;
+      padding: 60px 20px;
     }
 
     .hero-title {
-      font-size: 8rem;
-      margin-bottom: 20px;
-      display: inline-block;
-      animation: creepyFlicker 5s infinite;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-      color: #bbbbbb;
-      white-space: nowrap;
-    }
-
-    .gallery {
-      margin-bottom: 50px;
-    }
-
-    .gallery img {
-      width: 100%;
-      max-width: 600px;
-      border-radius: 10px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      max-width: 800px;
-      margin-top: 20px;
-    }
-
-    input {
-      padding: 15px;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 6px;
-      min-width: 220px;
-      flex: 1;
-    }
-
-    input[type="submit"] {
-      background-color: #ffffff;
-      color: #0d0d0d;
+      font-size: 4rem;
       font-weight: bold;
-      cursor: pointer;
-      max-width: 220px;
+      margin-bottom: 20px;
     }
 
-    .discover-button {
-      margin-top: 50px;
-      padding: 15px 30px;
-      background-color: transparent;
-      color: #ffffff;
-      border: 2px solid #ffffff;
-      border-radius: 5px;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
+    .hero-title span {
+      display: inline-block;
+      animation: flicker 2s infinite;
     }
 
-    .discover-button:hover {
-      background-color: #ffffff;
-      color: #0d0d0d;
+    .hero-title span:nth-child(odd) {
+      animation-delay: 0.5s;
+    }
+    .hero-title span:nth-child(even) {
+      animation-delay: 1.5s;
+    }
+    .hero-title span:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    .hero-title span:nth-child(4) {
+      animation-delay: 2s;
+    }
+    .hero-title span:nth-child(5) {
+      animation-delay: 0.8s;
+    }
+    .hero-title span:nth-child(6) {
+      animation-delay: 1.2s;
+    }
+    .hero-title span:nth-child(7) {
+      animation-delay: 0.7s;
+    }
+    .hero-title span:nth-child(8) {
+      animation-delay: 1.4s;
+    }
+    .hero-title span:nth-child(9) {
+      animation-delay: 0.9s;
+    }
+    .hero-title span:nth-child(10) {
+      animation-delay: 2.2s;
+    }
+    .hero-title span:nth-child(11) {
+      animation-delay: 1s;
+    }
+    .hero-title span:nth-child(12) {
+      animation-delay: 2.5s;
+    }
+    .hero-title span:nth-child(13) {
+      animation-delay: 0.6s;
+    }
+    .hero-title span:nth-child(14) {
+      animation-delay: 1.7s;
     }
 
-    @keyframes creepyFlicker {
-      0%, 10%, 15%, 22%, 50%, 85%, 100% {
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
         opacity: 1;
       }
-      11%, 16%, 23%, 51%, 86% {
+      20%, 22%, 24%, 55% {
         opacity: 0;
       }
     }
 
-    @media (max-width: 768px) {
+    .tagline {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+    }
+
+    .hero-image {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto 40px auto;
+      display: block;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .form-container input {
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .form-container button {
+      padding: 12px 24px;
+      background: white;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Share Tech Mono', monospace;
+    }
+
+    @media (max-width: 600px) {
       .hero-title {
-        font-size: 3rem;
-      }
-
-      h2 {
-        font-size: 1rem;
-      }
-
-      .gallery img {
-        width: 80%;
-        max-width: 300px;
-      }
-
-      form {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      input {
-        min-width: unset;
-        width: 100%;
-        max-width: 300px;
-      }
-
-      input[type="submit"] {
-        max-width: 300px;
+        font-size: 2.5rem;
+        flex-wrap: wrap;
       }
     }
   </style>
 </head>
 <body>
+  <h1 class="hero-title">
+    <span>Y</span><span>O</span><span>U</span><span>T</span><span>H</span><span>F</span><span>U</span><span>L</span>
+    &nbsp;
+    <span>D</span><span>Y</span><span>S</span><span>T</span><span>O</span><span>P</span><span>I</span><span>A</span>
+  </h1>
+  <p class="tagline">always wandering, never lost</p>
 
-  <h1 class="hero-title">YOUTHFUL DYSTOPIA</h1>
-  <h2>always wandering, never lost</h2>
+  <img src="1.png" alt="Bag" class="hero-image">
 
-  <div class="gallery">
-    <img src="bag1.png" alt="Hero Bag">
-  </div>
-
-  <form name="contact" method="POST" netlify>
-    <input type="text" name="name" placeholder="Name" required />
-    <input type="email" name="email" placeholder="Email" required />
-    <input type="text" name="instagram" placeholder="Instagram" required />
-    <input type="submit" value="Begin Dreaming" />
+  <form name="contact" method="POST" data-netlify="true" class="form-container">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="instagram" placeholder="Instagram Handle">
+    <button type="submit">Begin Dreaming</button>
   </form>
-
-  <a href="discover.html" class="discover-button">DISCOVER MORE</a>
-
 </body>
 </html>
