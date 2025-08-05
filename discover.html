@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Discover More - Youthful Dystopia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
       background-color: #0d0d0d;
-      color: #ffffff;
-      font-family: 'Share Tech Mono', monospace;
+      color: #f5f5dc; /* ecru */
+      font-family: 'Rubik Mono One', monospace;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -19,107 +19,68 @@
       text-align: center;
     }
 
+    .hero-logo {
+      width: 160px;
+      margin-bottom: 20px;
+    }
+
     h1 {
       font-size: 2.5rem;
       margin-bottom: 30px;
     }
 
-    .process-section {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      max-width: 900px;
-      margin-bottom: 60px;
+    .main-image {
       width: 100%;
-    }
-
-    .process-block {
-      padding: 20px;
-    }
-
-    .process-block h2 {
-      font-size: 1.6rem;
-      margin-bottom: 10px;
-      color: #ffffff;
-    }
-
-    .process-block p {
-      font-size: 1rem;
-      color: #cccccc;
-      line-height: 1.6;
-      max-width: 300px;
-      margin: 0 auto;
-      word-break: normal;
-      white-space: normal;
-    }
-
-    .process-block img {
-      width: 100%;
-      max-width: 300px;
-      margin-top: 20px;
+      max-width: 600px;
       border-radius: 8px;
+      margin-bottom: 30px;
     }
 
-    .footer-message {
+    .bio-text {
       max-width: 800px;
-      font-size: 1rem;
-      color: #bbbbbb;
-      line-height: 1.6;
-      margin-top: 40px;
-      padding: 0 20px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      color: #f5f5dc;
     }
 
-    @media (min-width: 768px) {
-      .process-section {
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        gap: 40px;
+    .back-button {
+      padding: 12px 24px;
+      border: 2px solid #f5f5dc;
+      border-radius: 5px;
+      color: #f5f5dc;
+      text-decoration: none;
+      font-size: 1rem;
+      display: inline-block;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
       }
 
-      .process-block {
-        width: 30%;
-        text-align: left;
-      }
-
-      .process-block p {
-        text-align: left;
-        margin-left: 0;
+      .bio-text {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
+
+  <img src="logo_eccru.png" alt="Youthful Dystopia Logo" class="hero-logo" />
+
   <h1>CRAFTED FROM THE PAST, BUILT FOR THE FUTURE</h1>
 
-  <div class="process-section">
-    <div class="process-block">
-      <h2>REIMAGINE</h2>
-      <p>We start with your vision, transforming your personal garments into something new.</p>
-      <img src="3.png" alt="Reimagine Process Image">
-    </div>
-    <div class="process-block">
-      <h2>RECONSTRUCT</h2>
-      <p>Deconstruction, assembly, and craftsmanship bring your custom piece to life.</p>
-      <img src="4.png" alt="Reconstruct Process Image">
-    </div>
-    <div class="process-block">
-      <h2>REBIRTH</h2>
-      <p>A one-of-a-kind statement piece, uniquely yours, with a story to tell.</p>
-      <img src="bag2.png" alt="Rebirth Process Image">
-    </div>
+  <img src="savior.png" alt="Savior Image" class="main-image" />
+
+  <div class="bio-text">
+    Youthful Dystopia is a New York-based upcycled fashion label born from the tension between collapsing worlds and youthful rebellion. Each piece is crafted from pre-loved garments — deconstructed and reassembled with raw textures, strange silhouettes, and survivalist energy. Nothing new. Nothing wasted. Built as armor for dreamers, drifters, and those who find beauty in the broken. Designed to blur fantasy and function, every stitch tells a story of survival, resistance, and self-expression in a world on fire.
   </div>
 
-  <div style="margin-top: 50px; text-align: center;">
-    <a href="index.html" style="padding: 12px 24px; border: 2px solid white; border-radius: 5px; color: white; text-decoration: none; font-size: 1rem; display: inline-block;">Back to Home</a>
-  </div>
+  <img src="queen.png" alt="Queen Image" class="main-image" />
 
-  <div class="footer-message" style="font-size: 1.2rem; margin-top: 30px; text-align: center;">
-    <p><strong>YOUTHFUL DYSTOPIA</strong> WAS BORN FROM AN INNER CHILD’S NEED TO FIND PEACE IN IMAGINATION</p>
-    <p>A HOPEFUL ESCAPE AMIDST DETERIORATION.</p>
-    <p>OUR ACCESSORIES SHOULD BE MORE INDIVIDUAL, MORE PERSONAL, MORE LOVED</p>
-    <p>A CONSCIOUS RESPONSE TO THE EXCESS WE CONSUME.</p>
-    <img src="logo.png" alt="Youthful Dystopia Logo" style="width: 120px; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">
-  </div>
+  <a href="index.html" class="back-button">Back to Home</a>
+
 </body>
 </html>
