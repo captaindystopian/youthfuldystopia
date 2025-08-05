@@ -93,7 +93,7 @@
       margin-bottom: 40px;
     }
 
-    textarea {
+    input, textarea {
       padding: 12px;
       font-size: 1rem;
       border-radius: 4px;
@@ -171,11 +171,17 @@
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
 
-  <div class="price">$600</div>
+  <div class="price">$400–800</div>
 
   <form name="custom-request" method="POST" data-netlify="true">
     <textarea name="customization" rows="6" placeholder="List any customization requests or let us know if you'd like to use your own denim."></textarea>
-    <button type="submit" class="submit-button">Submit Customization</button>
+  </form>
+
+  <form name="contact" method="POST" data-netlify="true">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="text" name="instagram" placeholder="Instagram Handle" />
+    <button type="submit" class="submit-button">BEGIN DREAMING</button>
   </form>
 
   <div class="payment-links">
