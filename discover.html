@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Discover More - Youthful Dystopia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Space+Grotesk&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
       background-color: #0d0d0d;
-      color: #f5f5dc; /* ecru */
+      color: #f5f5dc;
       font-family: 'Rubik Mono One', monospace;
       display: flex;
       flex-direction: column;
@@ -33,6 +33,12 @@
       width: 100%;
       max-width: 600px;
       border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      font-family: 'Rubik Mono One', monospace;
       margin-bottom: 30px;
     }
 
@@ -41,7 +47,7 @@
       font-size: 1.1rem;
       line-height: 1.8;
       margin-bottom: 40px;
-      color: #f5f5dc;
+      font-family: 'Space Grotesk', sans-serif;
     }
 
     .back-button {
@@ -51,8 +57,14 @@
       color: #f5f5dc;
       text-decoration: none;
       font-size: 1rem;
+      font-family: 'Rubik Mono One', monospace;
       display: inline-block;
       margin-top: 40px;
+    }
+
+    .back-button:hover {
+      background-color: #f5f5dc;
+      color: #0d0d0d;
     }
 
     @media (max-width: 600px) {
@@ -70,9 +82,11 @@
 
   <img src="logo_eccru.png" alt="Youthful Dystopia Logo" class="hero-logo" />
 
-  <h1>CRAFTED FROM THE PAST, BUILT FOR THE FUTURE</h1>
+  <h1>DISCOVER MORE</h1>
 
   <img src="savior.png" alt="Savior Image" class="main-image" />
+
+  <div class="subtitle">CRAFTED FROM THE PAST, BUILT FOR THE FUTURE</div>
 
   <div class="bio-text">
     Youthful Dystopia is a New York-based upcycled fashion label born from the tension between collapsing worlds and youthful rebellion. Each piece is crafted from pre-loved garments — deconstructed and reassembled with raw textures, strange silhouettes, and survivalist energy. Nothing new. Nothing wasted. Built as armor for dreamers, drifters, and those who find beauty in the broken. Designed to blur fantasy and function, every stitch tells a story of survival, resistance, and self-expression in a world on fire.
