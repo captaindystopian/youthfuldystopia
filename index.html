@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Youthful Dystopia</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
   <style>
@@ -43,34 +43,6 @@
       margin-bottom: 30px;
     }
 
-    .form-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      width: 100%;
-      max-width: 450px;
-    }
-
-    .form-container input {
-      padding: 12px;
-      width: 100%;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-
-    .form-container button {
-      padding: 12px 24px;
-      background: #f5f5dc;
-      color: #0d0d0d;
-      font-weight: bold;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-family: 'Rubik Mono One', monospace;
-    }
-
     .action-button {
       margin-top: 20px;
       padding: 12px 24px;
@@ -100,15 +72,6 @@
       .tagline {
         font-size: 1rem;
       }
-
-      .form-container {
-        max-width: 90%;
-      }
-
-      .form-container input,
-      .form-container button {
-        font-size: 0.9rem;
-      }
     }
   </style>
 </head>
@@ -124,15 +87,12 @@
 
   <p class="tagline">always wandering, never lost</p>
 
-  <form name="contact" method="POST" data-netlify="true" class="form-container">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <input type="text" name="instagram" placeholder="Instagram Handle" />
-    <button type="submit">Begin Dreaming</button>
-  </form>
+  <img src="homelogo.png" alt="Youthful Dystopia Alternate Logo" class="hero-logo" />
 
   <a href="discover.html" class="action-button">DISCOVER MORE</a>
   <a href="shop.html" class="action-button">SHOP D.E.B.</a>
+  <a href="quiz.html" class="action-button">WHO ARE YOU IN THE COLLAPSE?</a>
+  <a href="https://instagram.com/youthfuldystopian" class="action-button" target="_blank">FIELD NOTES</a>
 
 </body>
 </html>
