@@ -4,19 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Youthful Dystopia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
       background-color: #0d0d0d;
-      color: white;
-      font-family: 'Share Tech Mono', monospace;
+      color: #f5f5dc; /* Ecru */
+      font-family: 'Rubik Mono One', monospace;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       padding: 40px 20px;
+    }
+
+    .hero-logo {
+      width: 160px;
+      margin-bottom: 20px;
     }
 
     .hero-title {
@@ -30,21 +35,7 @@
 
     .hero-title span {
       display: inline-block;
-      animation: flicker 6s infinite;
-    }
-
-    .hero-title span:nth-child(odd) {
-      animation-delay: 0.5s;
-    }
-
-    .hero-title span:nth-child(even) {
-      animation-delay: 2s;
-    }
-
-    @keyframes flicker {
-      0%, 100% { opacity: 1; }
-      10%, 30%, 50%, 70%, 90% { opacity: 0.1; }
-      20%, 40%, 60%, 80% { opacity: 1; }
+      opacity: 1;
     }
 
     .tagline {
@@ -71,29 +62,29 @@
 
     .form-container button {
       padding: 12px 24px;
-      background: white;
-      color: black;
+      background: #f5f5dc;
+      color: #0d0d0d;
       font-weight: bold;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      font-family: 'Share Tech Mono', monospace;
+      font-family: 'Rubik Mono One', monospace;
     }
 
     .discover-button {
       margin-top: 30px;
       padding: 12px 24px;
-      border: 2px solid white;
-      color: white;
+      border: 2px solid #f5f5dc;
+      color: #f5f5dc;
       text-decoration: none;
       font-size: 1rem;
-      font-family: 'Share Tech Mono', monospace;
+      font-family: 'Rubik Mono One', monospace;
       border-radius: 4px;
       transition: all 0.3s ease;
     }
 
     .discover-button:hover {
-      background-color: white;
+      background-color: #f5f5dc;
       color: #0d0d0d;
     }
 
@@ -121,7 +112,7 @@
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Youthful Dystopia Logo" style="width: 160px; margin-bottom: 20px;" />
+  <img src="logo_eccru.png" alt="Youthful Dystopia Logo" class="hero-logo" />
 
   <h1 class="hero-title">
     <span>Y</span><span>O</span><span>U</span><span>T</span><span>H</span><span>F</span><span>U</span><span>L</span>
@@ -139,5 +130,8 @@
   </form>
 
   <a href="discover.html" class="discover-button">DISCOVER MORE</a>
+</body>
+</html>
+
 </body>
 </html>
